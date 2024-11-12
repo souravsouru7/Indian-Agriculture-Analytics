@@ -1,32 +1,45 @@
-Indian Agriculture Analytics
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
 
-A data visualization application for analyzing Indian agriculture data (1950-2020) using TypeScript, React, and Mantine UI components. This project processes and displays agricultural production data from the National Data and Analytics Platform (NITI Aayog).
+  <h1>Indian Agriculture Analytics 🌾</h1>
+  <p>A comprehensive data visualization application for analyzing Indian agriculture data (1950-2020) built with TypeScript, React, and Mantine UI components. This project processes and visualizes agricultural production data from the National Data and Analytics Platform (NITI Aayog).</p>
 
-Features
+  <p><strong>Live Demo:</strong> <a href="https://indian-agriculture-analytics.vercel.app/" target="_blank">Indian Agriculture Analytics</a></p>
 
-Yearly Production Analysis: Displays maximum and minimum crop production data for each year from 1950 to 2020
-Crop Performance Metrics: Shows average yield and cultivation area for all crops over the entire period
-Clean UI: Responsive interface built with Mantine v7 components
-Type-Safe: Fully implemented in TypeScript for robust data handling
+  <h2>Features ✨</h2>
+  <ul>
+    <li><strong>Yearly Production Analysis</strong>: Track maximum and minimum crop production data (1950-2020)</li>
+    <li><strong>Crop Performance Metrics</strong>: View average yield and cultivation area across all crops</li>
+    <li><strong>Clean UI</strong>: Modern, responsive interface using Mantine v7 components</li>
+    <li><strong>Type-Safe</strong>: Robust data handling with full TypeScript implementation</li>
+  </ul>
 
+  <h2>Screenshots 📸</h2>
+  <ul>
+    <li><h2>Production Analysis Dashboard</h2></li>
+    <img src="./Screenshot 2024-11-12 160729.png" alt="Production Analysis Dashboard" width="600">
+    <img src="./Screenshot 2024-11-12 160813.png" alt="Production Analysis Dashboard" width="600">
+    <img src="./Screenshot 2024-11-12 160833.png" alt="Production Analysis Dashboard" width="600">
+    <img src="./Screenshot 2024-11-12 160849.png" alt="Production Analysis Dashboard" width="600">
+    <li><h2>Production Analysis Crop Statistics Data Visualization Overview</h2></li>
+    <img src="./Screenshot 2024-11-12 160914.png" alt="Production Analysis Dashboard" width="600">
+  </ul>
 
-Screenshots
-![alt text](<Screenshot 2024-11-12 160849.png>) ![alt text](<Screenshot 2024-11-12 160833.png>) ![alt text](<Screenshot 2024-11-12 160813.png>) ![alt text](<Screenshot 2024-11-12 160729.png>)
-Yearly Production Analysis showing maximum and minimum producing crops
+  <h2>Tech Stack 🛠️</h2>
+  <table>
+    <tr><th>Technology</th><th>Purpose</th></tr>
+    <tr><td>TypeScript</td><td>Language</td></tr>
+    <tr><td>React</td><td>Frontend Framework</td></tr>
+    <tr><td>Vite</td><td>Build Tool</td></tr>
+    <tr><td>Mantine v7</td><td>UI Components</td></tr>
+  </table>
 
-
-![alt text](<Screenshot 2024-11-12 160914-1.png>)
-Average yield and cultivation area for each crop
-
-Tech Stack
-
-TypeScript
-React
-Vite
-Mantine v7
-No additional helper libraries used
-
-Project Structure
+  <h2>Project Structure 📁</h2>
+  <pre>
 indian-agro-analytics/
 ├── src/
 │   ├── assets/
@@ -45,48 +58,58 @@ indian-agro-analytics/
 ├── tsconfig.json
 ├── vite.config.ts
 └── README.md
+  </pre>
 
-Setup Instructions
- git clone https://github.com/souravsouru7/Indian-Agriculture-Analytics.git
- cd indian-agro-analytics
+  <h2>Getting Started 🚀</h2>
+  <ol>
+    <li>Clone the repository</li>
+    <pre><code>git clone https://github.com/souravsouru7/Indian-Agriculture-Analytics.git</code></pre>
+    <pre><code>cd indian-agro-analytics</code></pre>
+    <li>Install dependencies</li>
+    <pre><code>yarn install</code></pre>
+    <li>Start development server</li>
+    <pre><code>yarn dev</code></pre>
+  </ol>
 
- Install dependencies
- yarn install
+  <h2>Data Processing 📊</h2>
+  <ul>
+    <li>Missing values defaulted to 0</li>
+    <li>Average values rounded to 3 decimal places</li>
+    <li>Optimized aggregation functions</li>
+    <li>Type-safe data processing pipeline</li>
+  </ul>
 
-Start the development server:
-yarn dev
+  <h2>Implementation Details 💡</h2>
+  <table>
+    <tr><th>Feature</th><th>Description</th></tr>
+    <tr><td>Data Display</td><td>Mantine v7 Tables</td></tr>
+    <tr><td>Design</td><td>Responsive across devices</td></tr>
+    <tr><td>Error Handling</td><td>Robust error management</td></tr>
+    <tr><td>UX</td><td>Intuitive loading states</td></tr>
+  </table>
 
-Data Processing
+  <h2>Performance Considerations ⚡</h2>
+  <ul>
+    <li>Single-pass data processing algorithms</li>
+    <li>Memoized calculations</li>
+    <li>Optimized React rendering</li>
+  </ul>
 
-Missing values in the dataset are treated as 0
-All average values are rounded to 3 decimal places
-Data is processed efficiently using optimized aggregation functions
-Type safety is maintained throughout the data processing pipeline
+  <h2>Development Guidelines 👩‍💻</h2>
+  <ul>
+    <li>Maintain TypeScript interfaces</li>
+    <li>Follow established project structure</li>
+    <li>Use Mantine UI components</li>
+    <li>Preserve 3 decimal precision</li>
+    <li>Cross-device testing</li>
+  </ul>
 
-Implementation Details
+  <h2>Requirements 📋</h2>
+  <ul>
+    <li>Node.js 14+</li>
+    <li>Yarn package manager</li>
+    <li>Modern web browser</li>
+  </ul>
 
-Uses Mantine v7 Tables for data display
-Implements responsive design for various screen sizes
-Includes error handling for data processing
-Provides loading states for better user experience
-
-Performance Considerations
-
-Efficient data processing using single-pass algorithms
-Memoized calculations to prevent unnecessary recomputation
-Optimized rendering using React's built-in performance features
-
-Development Guidelines
-
-Maintain type safety by using TypeScript interfaces
-Follow the existing project structure
-Use Mantine components for UI elements
-Ensure all calculations maintain 3 decimal precision
-Test across different screen sizes
-
-Requirements
-
-Node.js 14+
-Yarn package manager
-Modern web browser
-
+</body>
+</html>

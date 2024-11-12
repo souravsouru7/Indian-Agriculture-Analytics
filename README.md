@@ -1,50 +1,92 @@
-# React + TypeScript + Vite
+Indian Agriculture Analytics
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A data visualization application for analyzing Indian agriculture data (1950-2020) using TypeScript, React, and Mantine UI components. This project processes and displays agricultural production data from the National Data and Analytics Platform (NITI Aayog).
 
-Currently, two official plugins are available:
+Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Yearly Production Analysis: Displays maximum and minimum crop production data for each year from 1950 to 2020
+Crop Performance Metrics: Shows average yield and cultivation area for all crops over the entire period
+Clean UI: Responsive interface built with Mantine v7 components
+Type-Safe: Fully implemented in TypeScript for robust data handling
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Screenshots
+![alt text](<Screenshot 2024-11-12 160849.png>) ![alt text](<Screenshot 2024-11-12 160833.png>) ![alt text](<Screenshot 2024-11-12 160813.png>) ![alt text](<Screenshot 2024-11-12 160729.png>)
+Yearly Production Analysis showing maximum and minimum producing crops
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+![alt text](<Screenshot 2024-11-12 160914-1.png>)
+Average yield and cultivation area for each crop
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Tech Stack
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+TypeScript
+React
+Vite
+Mantine v7
+No additional helper libraries used
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Project Structure
+indian-agro-analytics/
+├── src/
+│   ├── assets/
+│   │   └── Manufac_India_Agro_Dataset.json
+│   ├── components/
+│   │   ├── ProductionTable.tsx
+│   │   └── AveragesTable.tsx
+│   ├── types/
+│   │   └── index.ts
+│   ├── utils/
+│   │   └── dataProcessing.ts
+│   ├── App.tsx
+│   └── main.tsx
+├── index.html
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
+
+Setup Instructions
+ git clone https://github.com/souravsouru7/Indian-Agriculture-Analytics.git
+ cd indian-agro-analytics
+
+ Install dependencies
+ yarn install
+
+Start the development server:
+yarn dev
+
+Data Processing
+
+Missing values in the dataset are treated as 0
+All average values are rounded to 3 decimal places
+Data is processed efficiently using optimized aggregation functions
+Type safety is maintained throughout the data processing pipeline
+
+Implementation Details
+
+Uses Mantine v7 Tables for data display
+Implements responsive design for various screen sizes
+Includes error handling for data processing
+Provides loading states for better user experience
+
+Performance Considerations
+
+Efficient data processing using single-pass algorithms
+Memoized calculations to prevent unnecessary recomputation
+Optimized rendering using React's built-in performance features
+
+Development Guidelines
+
+Maintain type safety by using TypeScript interfaces
+Follow the existing project structure
+Use Mantine components for UI elements
+Ensure all calculations maintain 3 decimal precision
+Test across different screen sizes
+
+Requirements
+
+Node.js 14+
+Yarn package manager
+Modern web browser
+
